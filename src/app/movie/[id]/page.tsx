@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { imagePath } from "../Movie";
 
 type Props = {
@@ -27,6 +28,7 @@ export default async function MovieDetail({ params }: Props) {
 
   return (
     <div className="m-4">
+      <Link href="/" className="text-sm mb-4">Back</Link>
       <div>
         <h2 className="text-2xl">{movie.title}</h2>
         <h2 className="text-lg">{movie.release_date}</h2>
